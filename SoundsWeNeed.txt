@@ -1,0 +1,14 @@
+UI interactions - clicking buttons - j 
+UI interactions - call pause menu - j
+P1 shield - p
+P1 spike - p
+P1 slash - p
+P1 attack wall - p
+P1 gets hit - p
+P1 Cooldown finish - j
+P2 dash - c
+P2 hit shield - c
+P2 hit wall - c
+P2 gets hit - c
+P2 Cooldown finish - j
+Death sound - j
