@@ -27,6 +27,9 @@ public class Player2Controller : MonoBehaviour
 
         inDeadZone = false;
         dashed = false;
+
+        mouseDeadZone = GameObject.Find("MouseDeadZone");
+        player2 = GameObject.Find("Player1");
     }
 
     // Update is called once per frame

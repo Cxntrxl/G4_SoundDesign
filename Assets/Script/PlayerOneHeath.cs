@@ -24,6 +24,8 @@ public class PlayerOneHeath : MonoBehaviour
     void Start()
     {
         health = 1f;
+        Player2Controller = GameObject.Find("Player2").GetComponent<Player2Controller>();
+        player2 = GameObject.Find("Player2");
     }
 
     // Update is called once per frame
