@@ -9,11 +9,13 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject menu;
+    public GameObject audio;
 
     public void Start()
     {
         mainMenu.SetActive(true);
         menu.SetActive(false);
+        audio.SetActive(false);
     }
     public void LoadLevel1()
     {
@@ -36,15 +38,24 @@ public class MainMenu : MonoBehaviour
     }
 
     public void Back()
-    {    
+    {
+        audio.SetActive(false);
         mainMenu.SetActive(true);
         menu.SetActive(false);
     }
 
     public void Controles()
     {
+        audio.SetActive(false);
         mainMenu.SetActive(false);
         menu.SetActive(true);
+    }
+
+    public void Audio()
+    {
+        mainMenu.SetActive(false);
+        menu.SetActive(false);
+        audio.SetActive(true);
     }
 
     public void QuitGame()
