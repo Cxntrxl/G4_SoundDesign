@@ -17,6 +17,9 @@ public class HeathBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player2Health = GameObject.Find("Player2").GetComponent<player2Health>();
+        player1Health = GameObject.Find("Player1").GetComponent<PlayerOneHeath>();
+
         p1Health = player1Health.health;
         p2Health = player2Health.helth;
     }

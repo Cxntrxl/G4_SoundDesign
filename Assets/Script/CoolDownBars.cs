@@ -17,6 +17,9 @@ public class CoolDownBars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player2Controller = GameObject.Find("Player2").GetComponent<Player2Controller>();
+        player1Attacks = GameObject.Find("Player1").GetComponent<PlayerOneAttacks>();
+
         p1CoolDown = player1Attacks.timer;
         p2CoolDown = player2Controller.dashTimer;
     }
