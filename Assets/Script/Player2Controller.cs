@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player2Controller : MonoBehaviour
 {
+    public AudioSource p2_Dash;
+
     public bool inP2Collider = false;   
     public bool inDeadZone = false;
     public bool inWall = false;
@@ -83,6 +85,7 @@ public class Player2Controller : MonoBehaviour
             {
                 curSpeed += 0.2f;
                 dashed = true;
+                p2_Dash.Play();
                 timer = TimerTime;
                 dashTimer = 0.5f;
             }
