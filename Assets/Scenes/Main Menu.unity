@@ -646,7 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1622319268}
   menu: {fileID: 1895889238}
-  audio: {fileID: 1921815717}
+  audioPanel: {fileID: 1921815717}
 --- !u!1 &283578713
 GameObject:
   m_ObjectHideFlags: 0
