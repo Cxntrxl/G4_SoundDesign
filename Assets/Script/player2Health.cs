@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class player2Health : MonoBehaviour
 {
+    public AudioSource p2_damage;
+
     public int helth = 3;
 
     public float hitCoolDown = 3f;
@@ -47,7 +49,7 @@ public class player2Health : MonoBehaviour
             timer = hitCoolDown;
             isHit = true;
             helth--;
-         
+         p2_damage.Play();
         }
     }
 }
