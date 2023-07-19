@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clickEventManager : MonoBehaviour
+public class audioDontDestroy : MonoBehaviour
 {
     void Start()
     {
-        if (GameObject.Find("btn_clickEvent_audioSource") != gameObject)
+        string ObjectName = this.name;
+        if (GameObject.Find(ObjectName) != gameObject)
         {
             Destroy(gameObject);
         }
