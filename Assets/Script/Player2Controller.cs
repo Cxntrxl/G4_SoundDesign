@@ -3,10 +3,13 @@ using UnityEngine;
 public class Player2Controller : MonoBehaviour
 {
     public AudioSource p2_Dash;
+    public AudioSource p2_hShield;
 
     public bool inP2Collider = false;   
     public bool inDeadZone = false;
     public bool inWall = false;
+
+    public bool parry = false;
 
     public float acceleration;
     public float maxSpeed = 0.023f;
@@ -32,12 +35,13 @@ public class Player2Controller : MonoBehaviour
 
         mouseDeadZone = GameObject.Find("MouseDeadZone");
         player2 = GameObject.Find("Player1");
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (timer > 0)  // turens on and off "dashed" bool afrter a set time
+        if (timer > 0)  // turens on and off "dashed" bool after a set time
         {
             timer -= Time.deltaTime;
 
@@ -85,7 +89,7 @@ public class Player2Controller : MonoBehaviour
             {
                 curSpeed += 0.2f;
                 dashed = true;
-                p2_Dash.Play();
+                p2_Dash.Play(); // Play Sound 
                 timer = TimerTime;
                 dashTimer = 0.5f;
             }
@@ -115,6 +119,7 @@ public class Player2Controller : MonoBehaviour
         {
             curSpeed = 0.06f;
         }
+       
     }
 
     void FixedUpdate()
@@ -151,11 +156,13 @@ public class Player2Controller : MonoBehaviour
         if (col.gameObject == player2)
         {
             inP2Collider = true;
+            
         }
         else if (col.gameObject.tag == ("Wall"))
         {
             inWall = true;       
         }
+       
     }
 
     public void OnCollisionExit2D(Collision2D col)
@@ -186,6 +193,11 @@ public class Player2Controller : MonoBehaviour
             LookAtPlayer1();
             // pushes player backwords
             curSpeed = -0.2f;
+
+            if (other.gameObject.name == ("Circle"))
+            {
+                p2_hShield.Play();
+            }
 
             // checks if player is moving backwrds 
             if (curSpeed < 0f)
@@ -226,7 +238,7 @@ public class Player2Controller : MonoBehaviour
         transform.up = direction2;
     }
 
-    public void Move() //used t0 move player 2 forword
+    public void Move() //used to move player 2 forword
     {
         transform.Translate(Vector2.up * curSpeed); //moves player long vector
         if (inWall == false)
