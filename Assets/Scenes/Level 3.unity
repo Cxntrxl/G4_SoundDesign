@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0f3c073d1b064099ac0ab6a6b0697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1_attackbreak: {fileID: 674144996}
   sparks: {fileID: 4024437821059279803, guid: 72491ccdb07b08447a1353e43efec02b, type: 3}
   spawnPoint: {x: 0, y: 0}
 --- !u!50 &17598607
@@ -1703,6 +1704,11 @@ PrefabInstance:
 --- !u!4 &674144995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5686832124569027813, guid: c8471f5ce6cf6bd44be7ed87864ded19, type: 3}
+  m_PrefabInstance: {fileID: 674144994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &674144996 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8879015483566282535, guid: c8471f5ce6cf6bd44be7ed87864ded19, type: 3}
   m_PrefabInstance: {fileID: 674144994}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &739319585
@@ -6182,6 +6188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1HelthBar: {fileID: 1402551855}
   p2HelthBar: {fileID: 766303950}
+  PX_DeathSound: {fileID: 0}
+  deathPlayed: 0
   player2Health: {fileID: 0}
   player1Health: {fileID: 0}
 --- !u!114 &1843224184
@@ -6203,6 +6211,7 @@ MonoBehaviour:
   popMenu: {fileID: 1663629842}
   winMenu: {fileID: 334536831}
   winText: {fileID: 875622611}
+  UI_CallPause: {fileID: 0}
 --- !u!114 &1843224185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6303,6 +6312,10 @@ MonoBehaviour:
   player1Attacks: {fileID: 0}
   player1CoolDown: {fileID: 1072959369}
   player2CoolDown: {fileID: 1004621212}
+  P1_CooldownComplete: {fileID: 0}
+  P2_CooldownComplete: {fileID: 0}
+  P1_CooldownPlayed: 1
+  P2_CooldownPlayed: 1
 --- !u!1 &1880588308
 GameObject:
   m_ObjectHideFlags: 0

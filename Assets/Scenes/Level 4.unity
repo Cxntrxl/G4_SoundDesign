@@ -2763,6 +2763,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1HelthBar: {fileID: 351396396}
   p2HelthBar: {fileID: 1798708568}
+  PX_DeathSound: {fileID: 0}
+  deathPlayed: 0
   player2Health: {fileID: 511384333}
   player1Health: {fileID: 2019776112}
 --- !u!114 &690300409
@@ -2784,6 +2786,7 @@ MonoBehaviour:
   popMenu: {fileID: 1555496195}
   winMenu: {fileID: 953571508}
   winText: {fileID: 746159406}
+  UI_CallPause: {fileID: 0}
 --- !u!114 &690300410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2884,6 +2887,10 @@ MonoBehaviour:
   player1Attacks: {fileID: 2019776113}
   player1CoolDown: {fileID: 359369359}
   player2CoolDown: {fileID: 319904419}
+  P1_CooldownComplete: {fileID: 0}
+  P2_CooldownComplete: {fileID: 0}
+  P1_CooldownPlayed: 1
+  P2_CooldownPlayed: 1
 --- !u!1 &716433587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,6 +5667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0f3c073d1b064099ac0ab6a6b0697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1_attackbreak: {fileID: 5686832123094553228}
   sparks: {fileID: 4024437821059279803, guid: 72491ccdb07b08447a1353e43efec02b, type: 3}
   spawnPoint: {x: 0, y: 0}
 --- !u!50 &1793630037
@@ -6994,3 +7002,8 @@ PrefabInstance:
       objectReference: {fileID: 511384334}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8471f5ce6cf6bd44be7ed87864ded19, type: 3}
+--- !u!82 &5686832123094553228 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8879015483566282535, guid: c8471f5ce6cf6bd44be7ed87864ded19, type: 3}
+  m_PrefabInstance: {fileID: 5686832123094553227}
+  m_PrefabAsset: {fileID: 0}

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class wall : MonoBehaviour
 {
+
+    public AudioSource p1_attackbreak;
+
     [SerializeField]
     private GameObject sparks;
 
@@ -28,7 +31,9 @@ public class wall : MonoBehaviour
         // makes it so if an attack hits a wall it stops and is no longer active
         if (other.gameObject.name == ("stab attack") || other.gameObject.name == ("Closed Sprite Shape"))
         {
+
             Debug.Log("hit");
+            p1_attackbreak.Play();
             spawnPoint = other.transform.position;         
             Instantiate(sparks, spawnPoint, transform.rotation); // makes a particle as visaule feedback
             Destroy(other.gameObject);
