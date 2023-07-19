@@ -7,6 +7,8 @@ TagManager:
   - player 2
   - Attack
   - Wall
+  - Undefined
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Water
   - UI
   - ' Player 2'
-  - 
+  - Shield
   - 
   - 
   - 
