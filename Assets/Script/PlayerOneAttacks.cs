@@ -8,6 +8,7 @@ public class PlayerOneAttacks : MonoBehaviour
 
     public AudioSource p1_shield;
     public AudioSource p1_spike;
+    public AudioSource p1_swing;
 
     [SerializeField]
     private GameObject stabAttack;
@@ -69,6 +70,7 @@ public class PlayerOneAttacks : MonoBehaviour
             Instantiate(sweepAttack, spawnPoint, player1R.transform.rotation);
             canAttack=false;
             canSheld=false;
+            p1_swing.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Space) && canSheld == true)
         {
