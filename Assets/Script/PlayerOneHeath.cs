@@ -6,6 +6,8 @@ public class PlayerOneHeath : MonoBehaviour
 {
     public Player2Controller Player2Controller;
 
+    public AudioSource p1_hit;
+
     public float speed;
     public GameObject player2;
     public float health;
@@ -60,7 +62,8 @@ public class PlayerOneHeath : MonoBehaviour
             }
             timer = timerTime;
             canBeHit = false;
-            health -= speed;            
+            health -= speed;
+            p1_hit.Play();
         }
     }
 
