@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerOneAttacks : MonoBehaviour
 {
+
+    public AudioSource p1_shield;
+
     [SerializeField]
     private GameObject stabAttack;
 
@@ -71,6 +74,7 @@ public class PlayerOneAttacks : MonoBehaviour
             Instantiate(sheld, spawnPoint, player1R.transform.rotation);
             canSheld = false;
             canAttack = false;
+            p1_shield.Play();
         }
 
 
