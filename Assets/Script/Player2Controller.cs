@@ -10,8 +10,6 @@ public class Player2Controller : MonoBehaviour
     public bool inDeadZone = false;
     public bool inWall = false;
 
-    public bool parry = false;
-
     public float acceleration;
     public float maxSpeed = 0.023f;
 
