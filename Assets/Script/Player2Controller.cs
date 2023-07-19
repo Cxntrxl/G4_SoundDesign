@@ -4,6 +4,7 @@ public class Player2Controller : MonoBehaviour
 {
     public AudioSource p2_Dash;
     public AudioSource p2_hShield;
+    public AudioSource p2_hWall;
 
     public bool inP2Collider = false;   
     public bool inDeadZone = false;
@@ -160,7 +161,8 @@ public class Player2Controller : MonoBehaviour
         }
         else if (col.gameObject.tag == ("Wall"))
         {
-            inWall = true;       
+            inWall = true;   
+            p2_hWall.Play();
         }
        
     }
