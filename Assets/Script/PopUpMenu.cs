@@ -17,10 +17,12 @@ public class PopUpMenu : MonoBehaviour
     public Text winText;
 
     public AudioSource UI_CallPause;
+    public AudioSource UI_ClosePause;
     
     private void Start()
     {
         UI_CallPause = GameObject.Find("UI_CallPause_audioSource").GetComponent<AudioSource>();
+        UI_ClosePause = GameObject.Find("UI_ClosePause_audioSource").GetComponent<AudioSource>();
         Time.timeScale = 1;
         menu = false;
         gameOver = false;
@@ -46,6 +48,7 @@ public class PopUpMenu : MonoBehaviour
             }
             else
             {
+                UI_ClosePause.Play();
                 Time.timeScale = 1;
                 menu = false;
                 popMenu.SetActive(false);
