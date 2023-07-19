@@ -15,18 +15,21 @@ public class PopUpMenu : MonoBehaviour
     public GameObject popMenu;
     public GameObject winMenu;
     public Text winText;
+
+    public AudioSource UI_CallPause;
     
     private void Start()
     {
-      Time.timeScale = 1;
-      menu = false;
-      gameOver = false;
-      p1W = false;
-      p2W = false;
-      popMenu.SetActive(false);
+        UI_CallPause = GameObject.Find("UI_CallPause_audioSource").GetComponent<AudioSource>();
+        Time.timeScale = 1;
+        menu = false;
+        gameOver = false;
+        p1W = false;
+        p2W = false;
+        popMenu.SetActive(false);
         winMenu.SetActive(false);
-      scene = SceneManager.GetActiveScene();
-      sceneName = scene.name;
+        scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
     }
 
     private void Update()
@@ -36,6 +39,7 @@ public class PopUpMenu : MonoBehaviour
         {
             if (menu == false)
             {
+                UI_CallPause.Play();
                 Time.timeScale = 0;
                 menu = true;
                 popMenu.SetActive(true);
