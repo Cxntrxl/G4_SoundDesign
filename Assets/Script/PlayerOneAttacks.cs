@@ -7,6 +7,7 @@ public class PlayerOneAttacks : MonoBehaviour
 {
 
     public AudioSource p1_shield;
+    public AudioSource p1_spike;
 
     [SerializeField]
     private GameObject stabAttack;
@@ -59,7 +60,8 @@ public class PlayerOneAttacks : MonoBehaviour
         {
             timer = timerTime;            
             Instantiate(stabAttack, spawnPoint, player1R.transform.rotation);         
-            canAttack = false;              
+            canAttack = false;
+            p1_spike.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Period) && canAttack == true)
         {
