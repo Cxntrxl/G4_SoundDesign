@@ -355,7 +355,6 @@ MonoBehaviour:
   inP2Collider: 0
   inDeadZone: 0
   inWall: 0
-  parry: 0
   acceleration: 0
   maxSpeed: 30
   mouseDeadZone: {fileID: 0}
@@ -1021,7 +1020,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4821234814855098776, guid: b838627dee704254590d509dda81a031, type: 2}
   m_audioClip: {fileID: 8300000, guid: 017cfea0381d31148b734d44a089c6f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.219
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
