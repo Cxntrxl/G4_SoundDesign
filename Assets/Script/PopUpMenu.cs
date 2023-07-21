@@ -18,11 +18,13 @@ public class PopUpMenu : MonoBehaviour
 
     public AudioSource UI_CallPause;
     public AudioSource UI_ClosePause;
+    public AudioSource MUS_MainTheme;
     
     private void Start()
     {
         UI_CallPause = GameObject.Find("UI_CallPause_audioSource").GetComponent<AudioSource>();
         UI_ClosePause = GameObject.Find("UI_ClosePause_audioSource").GetComponent<AudioSource>();
+        MUS_MainTheme = GameObject.Find("MUS_MainTheme").GetComponent<AudioSource>();
         Time.timeScale = 1;
         menu = false;
         gameOver = false;
@@ -42,6 +44,7 @@ public class PopUpMenu : MonoBehaviour
             if (menu == false)
             {
                 UI_CallPause.Play();
+                MUS_MainTheme.Pause();
                 Time.timeScale = 0;
                 menu = true;
                 popMenu.SetActive(true);
@@ -49,6 +52,7 @@ public class PopUpMenu : MonoBehaviour
             else
             {
                 UI_ClosePause.Play();
+                MUS_MainTheme.UnPause();
                 Time.timeScale = 1;
                 menu = false;
                 popMenu.SetActive(false);
@@ -89,21 +93,25 @@ public class PopUpMenu : MonoBehaviour
     {
         if (sceneName == ("Level (Open)"))
         {
+            MUS_MainTheme.UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
         if (sceneName == ("Level 2"))
         {
+            MUS_MainTheme.UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
 
         if (sceneName == ("Level 3"))
         {
+            MUS_MainTheme.UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
         }
 
         if (sceneName == ("Level 4"))
         {
+            MUS_MainTheme.UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
         }
     }
@@ -112,6 +120,7 @@ public class PopUpMenu : MonoBehaviour
     public void RestartButton()
     {
         Time.timeScale = 1;
+        MUS_MainTheme.UnPause();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -120,6 +129,7 @@ public class PopUpMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         menu = false;
+        MUS_MainTheme.UnPause();
         popMenu.SetActive(false);
     }
 
